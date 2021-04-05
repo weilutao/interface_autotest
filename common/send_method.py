@@ -20,7 +20,7 @@ class SendMethod():
     返回值类型：json
     '''
     @staticmethod # 静态方法不需要实例化，使用方式：类名.静态方法
-    def send_method(self, method, url, params=None, json=None):
+    def send_method(method, url, params=None, json=None):
         if method == 'get' or method == 'delete':
             requests.request(method=method, url=url, params=params)
         elif method == 'post' or method == 'put':
@@ -34,11 +34,11 @@ class SendMethod():
             return response.json()
 
     @staticmethod
-    def format_response(self,response):
+    def format_response(response):
         '''
         格式化返回数据
         :param response: 返回数据
-        :return:
+        :return: 返回美化后的json格式数据
         '''
         return json.dumps(response, indent=2, ensure_ascii=False)
 
