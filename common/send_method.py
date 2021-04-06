@@ -28,7 +28,7 @@ class SendMethod():
         else:
             print('请求方式不正确')
             response = None
-        if method=='delete':
+        if method == 'delete':
             return response.status_code  # 如果请求方式是delete，只返回状态码
         else:
             return response.json()

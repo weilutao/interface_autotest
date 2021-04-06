@@ -8,7 +8,7 @@ class AddDepartment:
         self.url = ""
         self.method = method
 
-    def add_dep(self,data):
+    def add_dep(self, data):
         '''请求新增接口,针对单接口测试'''
         response = SendMethod.send_method(self.method, self.url, data)
         return response
